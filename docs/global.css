@@ -1,0 +1,124 @@
+/*
+  (C) 2020 David Lettier
+  lettier.com
+*/
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+  background-color: floralwhite;
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: 'Love Ya Like A Sister', sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 0px solid #ccc;
+	border-radius: 10px;
+  outline: none;
+}
+
+input {
+  width: 65%;
+  background-color: bisque;
+  color: coral;
+  font-size: 1.5vw;
+}
+
+input:disabled {
+  background-color: #aaa;
+	color: #eee;
+}
+
+input[type="range"] {
+	height: 0;
+}
+
+button {
+  cursor: pointer;
+	color: ghostwhite;
+  font-size: 1.5vw;
+	background-color: lightcoral;
+	outline: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: lightgrey;
+	color: #999;
+}
+
+button:not(:disabled):hover {
+  background-color: #ff8181;
+}
+
+button:not(:disabled):active > span {
+  position: relative;
+  top: 5px;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+@keyframes logo-border-keyframes {
+  0%   { border-color: bisque; border-width: 20px; }
+  50%  { border-color: white;  border-width: 25px; }
+  100% { border-color: bisque; border-width: 20px; }
+}
+
+.logo-border-animation {
+  animation-name: logo-border-keyframes;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button-keyframes {
+  from { margin-left: 20px;  }
+  to   { margin-left: 25px; }
+}
+
+.button-animation {
+  animation-name: button-keyframes;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes answer-keyframes {
+  from { transform: rotateX(180deg); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  to   { transform: rotateX(0deg);   backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+}
+
+.answer-animation {
+  animation-name: answer-keyframes;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
